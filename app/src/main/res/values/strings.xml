@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Database App</string>
+    <string name="learn_about_thrombosis">Learn About Thrombosis</string>
+    <string name="check_form">Check Form</string>
+    <string name="Check_Result">Check Result</string>
+</resources>
