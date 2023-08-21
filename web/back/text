@@ -1,0 +1,28 @@
+
+const healthData1 = {
+    Age: age,
+    'Systolic blood pressure': systolic,
+    'Blood sugar': bloodSugar,
+    'CK-MB': ckMb,
+    Troponin: troponin,
+    Gender: gender,
+};
+
+// Send the data to the API
+const apiUrl = 'https://sigh-ro67.onrender.com/predict'; // Replace with actual API URL
+const response = await fetch(apiUrl, {
+    method: 'POST',
+    headers: {
+        'Content-Type': 'application/json',
+    },
+    body: JSON.stringify([healthData1]),
+});
+
+const healthData1 = {
+    Age: getPerson.Age,
+    'Systolic blood pressure':  data.systolicBloodPressure,
+    'Blood sugar': data.bloodSugar,
+    'CK-MB': data.ckmb,
+    Troponin: data.troponin1,
+    Gender: getPerson.gender,
+};
