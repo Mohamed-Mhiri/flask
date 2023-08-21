@@ -1,0 +1,55 @@
+.gradient-custom-3 {
+    /* fallback for old browsers */
+    background: #eeeaea;
+  
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: -webkit-linear-gradient(to right, rgba(250, 244, 244, 0.5), rgba(143, 211, 244, 0.5));
+  
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(to right, rgba(236, 229, 229, 0.5), rgba(143, 211, 244, 0.5));
+  }
+  
+  
+  .gradient-custom-4 {
+    /* fallback for old browsers */
+    background: #fbc3c4;
+  
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: -webkit-linear-gradient(to right, rgba(251, 195, 196, 1), rgba(143, 211, 244, 1));
+  
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(to right, rgba(251, 195, 196, 1), rgba(143, 211, 244, 1));
+  }
+  
+  .bg-image {
+    /* Set the height and width to 100% to cover the entire page */
+    height: 100vh;
+    width: 100vw;
+    /* Apply the background image */
+    background-image: url('../../assets/med3.jpg');
+    /* Set background size to cover the entire container */
+    background-size: cover;
+    /* Center the background image horizontally and vertically */
+    background-position: center center;
+    /* Add any other desired background styles */
+    /* ... */
+  }
+  
+  
+  /* signup.css */
+  .cardBodyRight {
+    /* Align the card body to the right */
+    margin-left: auto;
+    /* Add space above and to the right */
+    margin-top: 100px;
+    margin-right: 150px;
+  }
+  
+  
+  .error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+  }
+  
+  

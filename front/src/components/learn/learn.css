@@ -1,0 +1,34 @@
+/* App.css */
+body {
+    background-color: white;
+  }
+  
+  .navbar {
+    background-color: white;
+  }
+  
+  .container {
+    background-color: white;
+  }
+  .custom-card1 {
+    color: black;
+    border-radius: 8px;
+    padding: 16px;
+    width: 70%;
+    margin: 0 auto; 
+  }
+  
+
+  .backgroundimage {
+    background-image: url('../../assets/back2.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+  }
+  
+  
+
+
+  
