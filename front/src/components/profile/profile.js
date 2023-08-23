@@ -50,23 +50,16 @@ const UpdateProfile = () => {
 
                   <MDBCard className='m-5 cardBodyRight' style={{width:'50%', transformStyle: 'preserve-3d', perspective: '1000px' ,  border: '1px solid black',marginTop:'10px'}}>
                     <MDBCardBody className='px-5' style={{ transform: 'translateZ(40px)', backfaceVisibility: 'hidden'}}>
-                   <h2 className="text-uppercase text-center mb-5" style={{ color: 'black', textDecoration: 'underline', textShadow: '0 2px 2px black', fontFamily: 'Courier New, monospace' }}> My  account</h2>
-                        <MDBInput wrapperClass='mb-0' size='lg' id='form1'  style={{  marginBottom: '10px'}} type='text'  value={userData.name}/>
-                        <MDBInput wrapperClass='mb-0' size='lg' id='form2' type='text'  style={{  marginBottom: '10px'}} value={userData.lastName} />
-                        <MDBInput wrapperClass='mb-0' size='lg' id='form2' type='number'  style={{  marginBottom: '10px'}} value={userData.age} />
+                   <h2 className="text-uppercase text-center mb-5" style={{ color: '#2BAEBD', textDecoration: 'underline', textShadow: '0 2px 2px black', fontFamily: 'Courier New, monospace' }}> My  account</h2>
+    
+                        <p style={{ color: 'black' }}><strong>First Name:</strong> {userData.name}</p>
+                        <p style={{ color: 'black' }}><strong>last Name:</strong> {userData.lastName}</p>
+                        <p style={{ color: 'black' }}><strong>Age:</strong> {userData.age}</p>
+                        <p style={{ color: 'black' }}><strong>Gender:</strong> {userData.gender}</p>
+                        <p style={{ color: 'black' }}><strong>Phone:</strong> {userData.phone}</p>
+                        <p style={{ color: 'black' }}><strong>Email:</strong> {userData.email}</p>
 
-                        <select
-                                className="form-select mb-0"
-                                value={userData.gender}
-                                style={{marginBottom: '10px', width: '23%' }}
-                            >
-                                <option value="" disabled style={{ fontSize: '14px' , color: '#DCDCDC'  }}>Gender</option>
-                                <option value="female">Female</option>
-                                <option value="male">Male</option>
-                            </select>
-                        <MDBInput wrapperClass='mb-0' size='lg' id='form3' type='tel'   style={{  marginBottom: '10px'}} value={userData.phone} />
-                        <MDBInput wrapperClass='mb-0' size='lg' id='form6' type='email' style={{  marginBottom: '10px'}} value={userData.email} />
-                       
+
 
                </MDBCardBody>
 
@@ -111,6 +104,11 @@ const styles = {
     height: '18px',
     fontSize: '16px', 
     marginRight: '5px', 
+  },
+  labelStyle :{
+    color: 'black', 
+    marginBottom: '5px',
+    fontWeight: 'bold',
   },
 
 };

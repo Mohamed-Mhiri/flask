@@ -54,8 +54,24 @@ const HomePage = () => {
                       <li>Feelings of leg fatigue or heaviness</li>
                     </ul>                    
                    </CCardText>
+                   <CCardTitle style={{ color: '#008B8B', textDecoration: 'underline', textShadow: '0 2px 2px #008B8B' ,fontSize:'30px'}}>
+                      <CIcon icon={cilChevronCircleRightAlt} customClassName="nav-icon"  style={styles.navIcon} />
+                      For more informations click here to watch
+                  </CCardTitle>
+                   <CCardText style={{border:' 2px solid black' ,fontSize:'18px', width:'60%' , margin: '0 auto'}}>
+                   <iframe
+                    width="100%"
+                    height="315"
+                    src="https://www.youtube.com/embed/QTuN60hgL5Y"
+                    title="YouTube Video"
+                    frameBorder="0"
+                    allowFullScreen
+                  ></iframe>       
+                   </CCardText>
+                   
 
               </CCardBody>
+
             </CCard>
           </CCol>
          

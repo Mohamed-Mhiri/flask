@@ -7,10 +7,11 @@ import {
   CAlert,
 } from '@coreui/react';
 import CIcon from '@coreui/icons-react';
-import {cilCaretRight,cilMoodVeryGood} from '@coreui/icons';
+import {cilCaretRight,cilMoodVeryGood,cilMoodBad} from '@coreui/icons';
 import { result } from '../../services/health';
 
 const HealthForm = ({ onSubmit }) => {
+  const [iconName, setIconName] = useState('');
   const [healthData, setHealthData] = useState({
     id: '',
     personId: '',
@@ -39,9 +40,11 @@ const HealthForm = ({ onSubmit }) => {
       
 
       if (resultValue === 0) {
+        setIconName(cilMoodVeryGood)
         setNotificationMessage("You're radiating good health, like a morning's bright glow.");
 
       } else if (resultValue === 1) {
+        setIconName(cilMoodBad)
         setNotificationMessage("Consider a health checkup for your continued well-being");
       } else {
         setNotificationMessage("Unknown response");
@@ -155,7 +158,7 @@ const HealthForm = ({ onSubmit }) => {
         {notificationMessage && (
         <div id="notification" style={{ color: "black" }}>
           <CAlert color="warning" style={{ fontSize: '20px', marginTop: '25px' }}>
-            <CIcon icon={cilMoodVeryGood} customClassName="nav-icon" style={styles.navIcon} /> {notificationMessage}
+            <CIcon icon={iconName} customClassName="nav-icon" style={styles.navIcon} /> {notificationMessage}
           </CAlert>
         </div>
       )}

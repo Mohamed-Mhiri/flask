@@ -172,11 +172,16 @@ const deletePerson = async (req, res, next) => {
         // Delete the person data
         await databaseRef.child(personId).remove();
 
-        // Delete associated health data
-        const healthSnapshot = await database.ref('health').orderByChild('personId').equalTo(personId).once('value');
-        healthSnapshot.forEach(async healthDataSnapshot => {
-            await healthDataSnapshot.ref.remove();
-        });
+           // Delete associated health data
+           const healthSnapshot = await database.ref('health').orderByChild('personId').equalTo(personId).once('value');
+        
+           const healthDeletionPromises = [];
+           
+           healthSnapshot.forEach(healthDataSnapshot => {
+               healthDeletionPromises.push(healthDataSnapshot.ref.remove());
+           });
+           
+           await Promise.all(healthDeletionPromises);
 
         res.send('Record and associated health data deleted successfully');
     } catch (error) {
