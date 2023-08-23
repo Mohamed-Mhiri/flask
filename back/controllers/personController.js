@@ -10,8 +10,7 @@ const bcrypt = require('bcrypt');
 const nodemailer = require('nodemailer');
 
 const transporter = nodemailer.createTransport({
-    // Configure your email service provider here
-    // For example, using Gmail SMTP:
+ 
     service: 'Gmail',
     auth: {
         user: 'testprj99@gmail.com',
